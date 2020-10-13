@@ -25,32 +25,35 @@ Miners solve puzzles with known partial inputs derived from the latest blockchai
 3. Create a block
 4. Find a valid nonce
 5. Broadcast your block
-   6)Profit
+6. Profit
+
+Nonce
+Randomised set of digits/numbers that used to verifiy that data has only been submitted once. As an authentication tool it makes sure a block has only been submitted once into the blockchain once.
 
 Merkle Trees
 
-Let's say we have four transactions. We run a hash function that allows us to create 4 unique hashes. The unique hashes are then run through another has function which prodcues 2 new hashes based upon the twinning of the previous 4 hashes. We then do this again, running the two pairs through another hash function that results in 1 single hash, forming what is known as the root hash and forming a complete root tree. Merkle trees allow for any changes within a block to be verified by comparing the current state of the block to the original version.
+Let's say we have four transactions. We run a hash function that allows us to create 4 unique hashes. The unique hashes are then run through another hash function which prodcues 2 new hashes based upon the twinning of the previous 4 hashes. We then do this again, running the two pairs through another hash function that results in 1 single hash, forming what is known as the root hash and forming a complete root tree. Merkle trees allow for any changes within a block to be verified by comparing the current state of the block to the original version.
 
 Proof of Work (PoW)
-PoW was created in the 90s to combat spam but was not used extensively until 2009 to secure the blockchain. With PoW, miners compete against each other to complete transactions on the network and add new blocks to the blockchain. As mining popularity has grown so have mining costs which has led to vast amounts of electricity being used in 'mining farms' or groups of people have formed mining pools; an aggregated method to share the cost of minining and the financial incentive. This leads to centralised behaviour rather than decentralised behaviour.
+PoW was created in the 90s to combat spam but was not used extensively until 2009 to secure the blockchain. With PoW, miners compete against each other to complete transactions on the network and add new blocks to the blockchain. As mining popularity has grown so have mining costs which has led to vast amounts of electricity being used in 'mining farms'. Groups have formed to create mining pools; an aggregated method to share the cost of minining and the financial incentive. This leads to centralised behaviour rather than decentralised behaviour.
 
 Proof of Stake (PoS)
-In PoS nodes are chosen randomly to validate the next block. It is not completely random as validators must put down a stake in order to complete the blockchain validity. In order to not incentivise fradulent behaviour, their stake must be greater than the transaction fees. This leads to decentralised behaviour and reduces the risk of 51% attack. The more money validators put down as stake, the more likely they are to be chosen.
+In PoS nodes are chosen randomly to validate the next block. It is not completely random as validators must put down a stake in order to complete the blockchain validity. In order to disincentivise fradulent behaviour, a validator's stake must be greater than the transaction fees. This leads to decentralised behaviour and reduces the risk of 51% attack. The more money validators put down as stake, the more likely they are to be chosen.
 
-asymmetric cryptography
+Asymmetric cryptography
 
-Symmetric cryptography is like me wanting to send a document to a friend but my friend needs a password to open it. How do i share this password without someone seeing my details.
+Symmetric cryptography is like me wanting to send a document to a friend but my friend needs a password to open it. How do I share this password without someone seeing my details.
 
-Assymetric cryptography is like having public mailbox. You put in your sensitive document, and only 1 person has a key private key to open it. Two users, Bob and Alice, they both have private and public keys which are mathematically linked. Public keys can be used to encrypt and only provate keys can open.
+Assymetric cryptography is like having public mailbox. You put in your sensitive document, and only 1 person has a private key to open it. Two users, Bob and Alice, they both have private and public keys which are mathematically linked. Public keys can be used to encrypt and only private keys can be used to open the file.
 Bob and Alice exchange public keys, Alice enrcypts her document with Bob's public key, now Bob can open it with his private key. Not even Alice can open her document.
 
 Ethereum Virtual Machine (EVM)
-BitCoin transformed the world, showing us we could use the blockchain for monetary transactions. Ethereum looked at the same technology and asked, what else, above and beyong cryptocurrency could we do with blockchain technology. EVM is a distrubuted ledger, Turing Complete\*, running smart contracts and immutable. Ether is used to fund computation, reward miners, align incentives.
+BitCoin transformed the world, showing us we could use the blockchain for monetary transactions. Ethereum looked at the same technology and asked, what else, above and beyong cryptocurrency could we do with blockchain technology. EVM is an immutable, distrubuted ledger, Turing Complete\*, running smart contracts. Ether is used to fund computation, reward miners, align incentives.
 
 Gas and Fees
-Code is written and deployed all over the world, and users must pay to have code run on the platform. Different operations have different prices. For example to run a contract is 10 gas. People must bid how much money per gas/unit to have contract run. Highest bidder winds. As developers we always want to think how much will it cost to run our code. The idea of gas is to avoid attacks on the network. We can not look at a piece of code and know if it will be in an infiite loop (halting problem) so we use gas. If run out of gas code doesnt execute, if paid too much gas, then gas refunded. Every opcode requires gas. You are paying miners for smart contrats on a distributed network that will give you a trustworthy output. Every transactions specifies
+Code is written and deployed all over the world, and users must pay to have code run on the platform. Different operations have different prices. For example to run a contract is 10 gas. People must bid how much money per gas/unit to have the contract run. Highest bidder wins. As developers we always want to think how much will it cost to run our code. The idea of gas is to avoid attacks on the network. We can not look at a piece of code and know if it will be in an infiite loop (halting problem) so we use gas. If run out of gas code doesnt execute, if paid too much gas, then gas refunded. Every opcode requires gas. You are paying miners for smart contrats on a distributed network that will give you a trustworthy output. Every transactions specifies
 
-stargas - maxiumum quanity of gas it is willing to consume
+startgas - maxiumum quanity of gas it is willing to consume
 
 gasprice- fee in ether it is willing to pay per unit of gas.
 
